@@ -16,17 +16,5 @@ znear = 1.5;          % minimum depth
 zfar = 3.5;          % maximum depth
 nsteps = 250;       % number of planes used
 n = [0 0 1]';
-dstep = (zfar - znear) / (nsteps - 1);
-depths = znear:dstep:zfar;
-
-[r, c] = size(camera(1).Image);
-depth_map = zeros(r, c);
-bestNCC = zeros(r, c);
-
-X1 = gpuArray(repmat(1:c,r,1));
-Y1 = gpuArray(repmat((1:r)',1,c));
-
-for d=depths
-H = (camera(2).K*(Rrel - Trel * n'./d)/camera(1).K^(-1));
-
-end
+depth = 
+H = (camera(2).K*(Rrel - Trel * n'./))
