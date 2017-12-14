@@ -17,5 +17,4 @@ end
 tline = fgetl(fidin);
 t = str2num(tline);
 t = t';
-
 end
